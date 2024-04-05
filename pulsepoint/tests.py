@@ -28,7 +28,7 @@ def _split_dataset(df: pd.DataFrame, splt_date: str, crnt_frmt= None):
 
     return train_df, test_df
 
-# %% ../nbs/01_tests.ipynb 7
+# %% ../nbs/01_tests.ipynb 8
 def _train_SF_model(df: pd.DataFrame,
                 model: list,
                 hrz: int = 7,
@@ -66,7 +66,7 @@ def _train_SF_model(df: pd.DataFrame,
     else:
         return fcst, None, None
 
-# %% ../nbs/01_tests.ipynb 9
+# %% ../nbs/01_tests.ipynb 11
 def _evaluate_results(dataset: pd.DataFrame, fcst: pd.DataFrame,mdl_name = 'MSTL', anom_level: int = 80, levels: list = [70,80,90,95,99]):
     """ Evaluate Results to find anamalies"""
 

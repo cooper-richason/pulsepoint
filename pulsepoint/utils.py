@@ -31,14 +31,14 @@ def _filter_dataframe(df,     # A pandas DataFrame
     
     return df
 
-# %% ../nbs/02_utils.ipynb 9
+# %% ../nbs/02_utils.ipynb 10
 def _rm_small_dims(df,threshold:int):
     """Remove Dimensions that have less than N observations"""
     val_drop = list(df['unique_id'].value_counts()[df['unique_id'].value_counts() < threshold].index)
     df = df[~df['unique_id'].isin(val_drop)]
     return df
 
-# %% ../nbs/02_utils.ipynb 11
+# %% ../nbs/02_utils.ipynb 12
 def _name_type_check(df,dimension,date_col):
     """Check datatypes and names of columns"""
     if dimension: 
@@ -51,7 +51,7 @@ def _name_type_check(df,dimension,date_col):
 
     return df
 
-# %% ../nbs/02_utils.ipynb 13
+# %% ../nbs/02_utils.ipynb 15
 def _process_metric_col(df,metric_col):
 
     if callable(metric_col): df['y'] = metric_col(grpd_df)
@@ -61,14 +61,14 @@ def _process_metric_col(df,metric_col):
     
     return df
 
-# %% ../nbs/02_utils.ipynb 15
+# %% ../nbs/02_utils.ipynb 18
 def _process_data(
-    path: str, 
-    dimension: str = None,
-    date_col: str = 'ds', 
-    metric_col: Union[str, Callable] = 'y',
-    filters: list[dict] = None,
-    sz_threshold = 50):
+    path: str, # Path to Feather File
+    dimension: str = None, # Independant Variable
+    date_col: str = 'ds',  # Date Column    
+    metric_col: Union[str, Callable] = 'y', # Dependent Variable
+    filters: list[dict] = None, # Desired Filters
+    sz_threshold = 50): # Minimum number of observations
     """Filters and aggregates data"""
 
     df = pd.read_feather(path)
