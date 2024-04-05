@@ -1,0 +1,82 @@
+[
+  {
+    "objectID": "tests.html",
+    "href": "tests.html",
+    "title": "Tests Utils",
+    "section": "",
+    "text": "source",
+    "crumbs": [
+      "Tests Utils"
+    ]
+  },
+  {
+    "objectID": "tests.html#evaulating-results",
+    "href": "tests.html#evaulating-results",
+    "title": "Tests Utils",
+    "section": "Evaulating Results:",
+    "text": "Evaulating Results:\n\nsource\n\n_evaluate_results\n\n _evaluate_results (dataset:pandas.core.frame.DataFrame,\n                    fcst:pandas.core.frame.DataFrame, mdl_name='MSTL',\n                    anom_level:int=80, levels:list=[70, 80, 90, 95, 99])\n\nEvaluate Results to find anamalies",
+    "crumbs": [
+      "Tests Utils"
+    ]
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "pulsepoint",
+    "section": "",
+    "text": "This is a framework to build tests using StatsForecast and Neural Forecasts. Probably not super usefull to others…",
+    "crumbs": [
+      "pulsepoint"
+    ]
+  },
+  {
+    "objectID": "index.html#install",
+    "href": "index.html#install",
+    "title": "pulsepoint",
+    "section": "Install",
+    "text": "Install\npip install pulsepoint",
+    "crumbs": [
+      "pulsepoint"
+    ]
+  },
+  {
+    "objectID": "utils.html",
+    "href": "utils.html",
+    "title": "Utility Functions",
+    "section": "",
+    "text": "We will need to be able to filter the input data to fit our testing needs. _filter_dataframe is a function to do this that takes in a pandas Dataframe and a set of filters.\n/opt/hostedtoolcache/Python/3.9.19/x64/lib/python3.9/site-packages/statsforecast/utils.py:237: FutureWarning: 'M' is deprecated and will be removed in a future version, please use 'ME' instead.\n  \"ds\": pd.date_range(start=\"1949-01-01\", periods=len(AirPassengers), freq=\"M\"),\n\nsource\n\n\n\n\n _filter_dataframe (df, filters)\n\nFilter a DataFrame using a dictionary or a list of dictionaries with multiple filter conditions.\nFilter Examples: You can pass in a single value like {“State”:“Wisconsin”}. You can also pass in a list {“Cities”:[“La Crosse”,“Madison”,“Eau Claire”,“Milwaukee”]}\n\n\n\n\nType\nDetails\n\n\n\n\ndf\n\nA pandas DataFrame\n\n\nfilters\n\ndictonary or list of dictionaries\n\n\nReturns\nDataFrame\n\n\n\n\n\n\n\n\n\n\nsource\n\n\n\n\n\n _name_type_check (df, dimension, date_col)\n\nCheck datatypes and names of columns\n\n\n\nsource\n\n\n\n\n\n _process_metric_col (df, metric_col)\n\n\n\n\nsource\n\n\n\n\n\n _process_data (path:str, dimension:str=None, date_col:str='ds',\n                metric_col:Union[str,Callable]='y',\n                filters:list[dict]=None, sz_threshold=50)\n\nFilters and aggregates data\n\n\n\n\n\n\n\n\n\n\nType\nDefault\nDetails\n\n\n\n\npath\nstr\n\nPath to Feather File\n\n\ndimension\nstr\nNone\nIndependant Variable\n\n\ndate_col\nstr\nds\nDate Column\n\n\nmetric_col\ntyping.Union[str, typing.Callable]\ny\nDependent Variable\n\n\nfilters\nlist\nNone\nDesired Filters\n\n\nsz_threshold\nint\n50\nMinimum number of observations",
+    "crumbs": [
+      "Utility Functions"
+    ]
+  },
+  {
+    "objectID": "utils.html#processing-data",
+    "href": "utils.html#processing-data",
+    "title": "Utility Functions",
+    "section": "",
+    "text": "We will need to be able to filter the input data to fit our testing needs. _filter_dataframe is a function to do this that takes in a pandas Dataframe and a set of filters.\n/opt/hostedtoolcache/Python/3.9.19/x64/lib/python3.9/site-packages/statsforecast/utils.py:237: FutureWarning: 'M' is deprecated and will be removed in a future version, please use 'ME' instead.\n  \"ds\": pd.date_range(start=\"1949-01-01\", periods=len(AirPassengers), freq=\"M\"),\n\nsource\n\n\n\n\n _filter_dataframe (df, filters)\n\nFilter a DataFrame using a dictionary or a list of dictionaries with multiple filter conditions.\nFilter Examples: You can pass in a single value like {“State”:“Wisconsin”}. You can also pass in a list {“Cities”:[“La Crosse”,“Madison”,“Eau Claire”,“Milwaukee”]}\n\n\n\n\nType\nDetails\n\n\n\n\ndf\n\nA pandas DataFrame\n\n\nfilters\n\ndictonary or list of dictionaries\n\n\nReturns\nDataFrame\n\n\n\n\n\n\n\n\n\n\nsource\n\n\n\n\n\n _name_type_check (df, dimension, date_col)\n\nCheck datatypes and names of columns\n\n\n\nsource\n\n\n\n\n\n _process_metric_col (df, metric_col)\n\n\n\n\nsource\n\n\n\n\n\n _process_data (path:str, dimension:str=None, date_col:str='ds',\n                metric_col:Union[str,Callable]='y',\n                filters:list[dict]=None, sz_threshold=50)\n\nFilters and aggregates data\n\n\n\n\n\n\n\n\n\n\nType\nDefault\nDetails\n\n\n\n\npath\nstr\n\nPath to Feather File\n\n\ndimension\nstr\nNone\nIndependant Variable\n\n\ndate_col\nstr\nds\nDate Column\n\n\nmetric_col\ntyping.Union[str, typing.Callable]\ny\nDependent Variable\n\n\nfilters\nlist\nNone\nDesired Filters\n\n\nsz_threshold\nint\n50\nMinimum number of observations",
+    "crumbs": [
+      "Utility Functions"
+    ]
+  },
+  {
+    "objectID": "statsforecast.html",
+    "href": "statsforecast.html",
+    "title": "StatsForecast",
+    "section": "",
+    "text": "source\n\n\n\n SF_test (path:str, splt_date:str, model:list, dimension:str=None,\n          date_col:str='ds', metric_col:str='y', filters:list[dict]=None,\n          crnt_frmt=None, hrz:int=7, freq:str='D',\n          cross_validate:bool=False, cv_periods:int=0, anom_level:int=80,\n          fruitful:bool=False, publish_fn:Callable=None, **kwargs)\n\nRun Model(s) from StatsForecast\n\n\n\n\nType\nDefault\nDetails\n\n\n\n\npath\nstr\n\nPath of feather file\n\n\nsplt_date\nstr\n\nDate to split data\n\n\nmodel\nlist\n\nModels to use\n\n\ndimension\nstr\nNone\ndimension of test\n\n\ndate_col\nstr\nds\nIndependant Variable\n\n\nmetric_col\nstr\ny\nDependend Variable\n\n\nfilters\nlist\nNone\n\n\n\ncrnt_frmt\nNoneType\nNone\nFormat of Date Column\n\n\nhrz\nint\n7\nTest Horizon\n\n\nfreq\nstr\nD\nData frequency\n\n\ncross_validate\nbool\nFalse\n\n\n\ncv_periods\nint\n0\n\n\n\nanom_level\nint\n80\n\n\n\nfruitful\nbool\nFalse\n\n\n\npublish_fn\ntyping.Callable\nNone\n\n\n\nkwargs",
+    "crumbs": [
+      "StatsForecast"
+    ]
+  },
+  {
+    "objectID": "statsforecast.html#run-statsforecast-models",
+    "href": "statsforecast.html#run-statsforecast-models",
+    "title": "StatsForecast",
+    "section": "",
+    "text": "source\n\n\n\n SF_test (path:str, splt_date:str, model:list, dimension:str=None,\n          date_col:str='ds', metric_col:str='y', filters:list[dict]=None,\n          crnt_frmt=None, hrz:int=7, freq:str='D',\n          cross_validate:bool=False, cv_periods:int=0, anom_level:int=80,\n          fruitful:bool=False, publish_fn:Callable=None, **kwargs)\n\nRun Model(s) from StatsForecast\n\n\n\n\nType\nDefault\nDetails\n\n\n\n\npath\nstr\n\nPath of feather file\n\n\nsplt_date\nstr\n\nDate to split data\n\n\nmodel\nlist\n\nModels to use\n\n\ndimension\nstr\nNone\ndimension of test\n\n\ndate_col\nstr\nds\nIndependant Variable\n\n\nmetric_col\nstr\ny\nDependend Variable\n\n\nfilters\nlist\nNone\n\n\n\ncrnt_frmt\nNoneType\nNone\nFormat of Date Column\n\n\nhrz\nint\n7\nTest Horizon\n\n\nfreq\nstr\nD\nData frequency\n\n\ncross_validate\nbool\nFalse\n\n\n\ncv_periods\nint\n0\n\n\n\nanom_level\nint\n80\n\n\n\nfruitful\nbool\nFalse\n\n\n\npublish_fn\ntyping.Callable\nNone\n\n\n\nkwargs",
+    "crumbs": [
+      "StatsForecast"
+    ]
+  }
+]
