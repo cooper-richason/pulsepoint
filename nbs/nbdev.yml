@@ -1,0 +1,9 @@
+project:
+  output-dir: _docs
+
+website:
+  title: "pulsepoint"
+  site-url: "https://cooper-richason.github.io/pulsepoint"
+  description: "Anomaly Detection Framework"
+  repo-branch: main
+  repo-url: "https://github.com/cooper-richason/pulsepoint"
